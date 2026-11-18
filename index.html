@@ -1,87 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Web giới thiệu bản thân</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thư Xin Lỗi Đáng Yêu 💕</title>
+
+  <!-- Tải Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font chữ Comic Neue -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .apology-letter-container {
+      font-family: "Comic Neue", cursive;
+    }
+
+    /* Nền hồng gradient */
+    .kitty-gradient {
+      background: linear-gradient(
+        135deg,
+        #ffb6c1 0%,
+        #ffc0cb 25%,
+        #ffb3d1 50%,
+        #ffa8e4 75%,
+        #ff9ee5 100%
+      );
+    }
+
+    /* Lớp phủ mờ cho modal */
+    .modal-backdrop {
+      background: rgba(255, 182, 193, 0.8);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Thẻ nổi 3D */
+    .card-3d {
+      background: linear-gradient(145deg, #ffb6c1, #ffc0cb);
+      box-shadow: 20px 20px 60px #d4a4a8, -20px -20px 60px #ffe2e6;
+      border-radius: 25px;
+    }
+
+    /* Hiệu ứng nút bấm nảy */
+    .heart-bounce {
+      animation: heartBounce 1.5s ease-in-out infinite;
+    }
+    @keyframes heartBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Hiệu ứng icon lấp lánh */
+    .sparkle {
+      animation: sparkle 2s ease-in-out infinite;
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* Hiệu ứng ảnh lơ lửng */
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Hiệu ứng mưa trái tim rơi */
+    .falling-heart {
+      position: fixed;
+      top: -10vh;
+      font-size: 24px;
+      pointer-events: none;
+      z-index: 60;
+      animation: fall linear forwards;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Footer */
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f8f9fa;
+      color: #fb6f92;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      z-index: 1000;
+    }
+
+    .heart {
+      animation: blink 1s linear infinite;
+      width: 16px;
+      height: 16px;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
 </head>
-<body class="sub_page">
-    <div class="hero_area">
-        <header class="header_section">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="batdau.html">
-                        <img src="images/logo.png" alt="">
-                        <span>
-                            Web giới thiệu bản thân
-                        </span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="s-1"> </span>
-                        <span class="s-2"> </span>
-                        <span class="s-3"> </span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                            <ul class="navbar-nav  ">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="index.html">Bắt đầu <span class="sr-only">(current)</span></a>
-                                </li>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
+
+<body>
+  <div class="apology-letter-container kitty-gradient min-h-screen relative overflow-hidden">
+    
+    <!-- Icon trang trí nền -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-10 left-10 text-pink-300 text-6xl sparkle">💖</div>
+      <div style="animation-delay: 0.5s" class="absolute top-20 right-20 text-pink-400 text-4xl sparkle">✨</div>
+      <div style="animation-delay: 1s" class="absolute bottom-20 left-20 text-pink-300 text-5xl sparkle">🌸</div>
+      <div style="animation-delay: 1.5s" class="absolute bottom-10 right-10 text-pink-400 text-6xl sparkle">💕</div>
+      <div style="animation-delay: 2s" class="absolute top-1/2 left-1/4 text-pink-300 text-3xl sparkle">🎀</div>
+      <div style="animation-delay: 2.5s" class="absolute top-1/3 right-1/3 text-pink-400 text-4xl sparkle">💝</div>
     </div>
-    <section class="image_section layout_padding"></section>
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Giới thiệu bản thân qua hình ảnh
-                </h2>
-            </div>
-            <div class="image_container"></div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="img-box"></div>
-                            <img src="img/image1.jpg" alt="Image 1" style="width: 100%; height: auto;">
-                            <div class="caption"></div>
-                                <p>Mình tên là Nguyễn Thành Thái</p>
-                                <p>Mình là học sinh lớp 12A2</p>
-                                <p>Sở thích của mình là chơi thể thao</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4"></div>
-                        <div class="img-box"></div>
-                            <img src="img/image2.jpg" alt="Image 2" style="width: 40%; height: auto;">
-                            <div class="caption"></div>
-                                <p>Đây là ca sĩ yêu thích của mình là rapper Bình gold. Là 1 rapper mình yêu thích nhất với phong cách hiphop</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="img-box"></div>
-                            <img src="img/image3.jpg" alt="Image 3" style="width: 100%; height: auto;">
-                            <div class="caption">
-                                <p>Đây là lúc mình đi chùa cùng cả lớp mình</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <!-- MÀN 1: CHÀO MỪNG -->
+    <div id="step1" class="relative z-10 flex items-center justify-center min-h-screen p-4">
+      <div class="text-center">
+        <div class="card-3d p-12 max-w-lg mx-auto border-4 border-pink-200">
+          <img 
+            src="https://i.ibb.co/3gz4Ctq/Locket-1786334497942-9.png" 
+            alt="Hello Kitty" 
+            class="w-32 h-32 mx-auto mb-6 floating rounded-md object-cover"
+          />
+          <h1 class="text-4xl font-bold text-pink-600 mb-6">Hii phương iuu dấu của anhhh! 💕</h1>
+          <p class="text-pink-500 text-lg mb-8">Anh có một điều rất đặc biệt dành cho em...</p>
+          <button 
+            onclick="goToStep2()"
+            class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-4 px-8 rounded-full text-xl heart-bounce transition-all duration-300 shadow-lg cursor-pointer"
+          >
+            Đâu coii! ✨
+          </button>
         </div>
-    </section></div>
+      </div>
+    </div>
+
+    <!-- MÀN 2: CÂU HỎI TƯƠNG TÁC (Ẩn ban đầu) -->
+    <div id="step2" class="hidden fixed inset-0 modal-backdrop flex items-center justify-center z-50 p-4">
+      <div class="card-3d p-10 max-w-md w-full border-4 border-pink-200 text-center relative">
+        <img 
+          src="https://i.ibb.co/YBbHfSWG/35ded69e29774f67838da1a74278de3a.jpg" 
+          alt="Love Question" 
+          class="w-32 h-32 mx-auto mb-6 floating rounded-md object-cover"
+        />
+        <h2 id="questionTitle" class="text-3xl font-bold text-pink-600 mb-6">
+          Em có yêu anh không?
+        </h2>
+        <div class="flex justify-center items-center gap-4 min-h-[60px]">
+          <button 
+            id="yesBtn"
+            onclick="goToStep3()"
+            class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 shadow-md cursor-pointer z-10"
+          >
+            CÓ! 💕
+          </button>
+          <button 
+            id="noBtn"
+            onmouseover="dodgeNoButton()"
+            onclick="dodgeNoButton()"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-3 px-6 rounded-full text-lg transition-all duration-200 cursor-pointer"
+          >
+            Không 😢
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÀN 3: NỘI DUNG THƯ XIN LỖI (Ẩn ban đầu) -->
+    <div id="step3" class="hidden relative z-20 flex items-center justify-center min-h-screen p-4 pb-16">
+      <div class="card-3d p-8 md:p-10 max-w-xl w-full border-4 border-pink-200 text-center bg-white/80">
+        <div class="text-5xl mb-4 floating">💌</div>
+        <h2 class="text-3xl font-bold text-pink-600 mb-4">
+          Anh xin lỗi công túa của anh nhìuuuuu! 🥺
+        </h2>
+        
+        <!-- Bạn chỉnh sửa nội dung lời xin lỗi ở đoạn dưới đây -->
+        <div class="bg-white/70 rounded-2xl p-6 text-pink-700 text-lg leading-relaxed text-left space-y-3 shadow-inner mb-6">
+          <p>Gửi em bé phương iuuuu của anh,</p>
+          <p>
+            Anh biết hôm nay anh đã làm em buồn và giận anh nhiều lắm. Anh thật sự xin lỗi vì sự vô tâm của mình.
+          </p>
+          <p>
+            Thế giới của anh chỉ vui khi thấy em cười thôi. Đừng giận anh nữa nhé, cho anh cơ hội được bù đắp và ôm em một cái thật chặt nha! 💖
+          </p>
+          <p class="text-right font-bold text-pink-600 pt-2">
+            — Người yêu em nhất trên đời 🌸
+          </p>
+          <p class="text-right font-bold text-pink-600 pt-2">
+            Hùng yêuuu dấu của iuuuu 
+          </p>
+        </div>
+
+        <button 
+          onclick="forgiveSuccess()"
+          id="forgiveBtn"
+          class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-xl heart-bounce shadow-lg cursor-pointer transition-all"
+        >
+          Tha lỗi cho anh nha 🥰
+        </button>
+      </div>
+    </div>
+
+    <!-- Chân trang -->
+    <footer class="footer">
+      <span>Xinnn lỗi</span>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="heart">
+        <path d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z" fill="#ff6999"></path>
+      </svg>
+      <span>Phương iuu của anhhh!</span>
+    </footer>
+
+  </div>
+
+  <script>
+    let noClickCount = 0;
+    const pleads = [
+      "Em chắc chưa? 🥺",
+      "Nghĩ lại đi mà công túa 😭",
+      "Đừng bấm nút này nữa huhu 💔",
+      "Nút này hỏng rồi, bấm nút hồng đi 💕",
+      "Anh biết lỗi rồi màaa 🥺✨"
+    ];
+
+    // Chuyển sang Màn 2
+    function goToStep2() {
+      document.getElementById("step1").classList.add("hidden");
+      document.getElementById("step2").classList.remove("hidden");
+    }
+
+    // Hiệu ứng nút "Không" chạy trốn & nút "CÓ" to dần
+    function dodgeNoButton() {
+      const noBtn = document.getElementById("noBtn");
+      const yesBtn = document.getElementById("yesBtn");
+      const title = document.getElementById("questionTitle");
+
+      // Đổi câu năn nỉ
+      title.innerText = pleads[noClickCount % pleads.length];
+      noClickCount++;
+
+      // Phóng to nút CÓ
+      const currentScale = 1 + noClickCount * 0.15;
+      yesBtn.style.transform = `scale(${Math.min(currentScale, 2.2)})`;
+
+      // Di chuyển ngẫu nhiên nút Không trong khung thẻ
+      const randomX = (Math.random() - 0.5) * 220;
+      const randomY = (Math.random() - 0.5) * 180;
+      noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    // Chuyển sang Màn 3 (Lá thư xin lỗi)
+    function goToStep3() {
+      document.getElementById("step2").classList.add("hidden");
+      document.getElementById("step3").classList.remove("hidden");
+      startHeartRain();
+    }
+
+    // Khi bấm tha lỗi
+    function forgiveSuccess() {
+      const btn = document.getElementById("forgiveBtn");
+      btn.innerText = "Yêu Phương nhất quả đất lunnnnn! 💖🎉";
+      btn.classList.remove("bg-pink-500");
+      btn.classList.add("bg-rose-500");
+      for (let i = 0; i < 30; i++) {
+        setTimeout(createHeart, i * 80);
+      }
+    }
+
+    // Tạo hiệu ứng tim rơi
+    function createHeart() {
+      const emojis = ["💖", "💕", "🌸", "✨", "💝", "🎀"];
+      const heart = document.createElement("div");
+      heart.classList.add("falling-heart");
+      heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    function startHeartRain() {
+      setInterval(createHeart, 400);
+    }
+  </script>
 </body>
 </html>
